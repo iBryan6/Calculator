@@ -3,7 +3,13 @@ body {
     background: #c31432;
     background: -webkit-linear-gradient(to right, #240b36, #c31432);
     background: linear-gradient(to right, #240b36, #c31432);
+    font-family: system-ui;
+}
 
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 50px;
 }
 
 .calculator {
@@ -24,10 +30,11 @@ body {
     text-align: right;
     font-size: 30px;
     color: SkyBlue;
+    cursor: none;
 }
 
 .calculator input::placeholder {
-    color: LightSkyBlue;
+    color: black;
 }
 
 .calculator-buttons {
