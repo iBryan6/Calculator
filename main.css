@@ -1,0 +1,62 @@
+body {
+    padding: 30px 0 30px 0;
+    background: #c31432;
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);
+    background: linear-gradient(to right, #240b36, #c31432);
+
+}
+
+.calculator {
+    background-color: white;
+    max-width: 450px;
+    margin: 0 auto;
+    border: 2px solid #111;
+    border-radius: 4px;
+}
+
+.calculator input {
+    background: none;
+    border: none;
+    box-shadow: none;
+    width: 100%;
+    border-bottom: 2px solid #111;
+    padding: 20px 0;
+    text-align: right;
+    font-size: 30px;
+    color: SkyBlue;
+}
+
+.calculator input::placeholder {
+    color: LightSkyBlue;
+}
+
+.calculator-buttons {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+.clearCal {
+    grid-column: span 3;
+    background-color: #c31432 !important;
+}
+
+.zero {
+    grid-column: span 3;
+}
+
+.equals {
+    background-color: forestgreen !important;
+}
+
+.cal-button {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #111;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
