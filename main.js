@@ -1,55 +1,29 @@
-$(document).ready(function () {
-    'use strict';
+function getHistory() {
+    return document.getElementById("history").innerText;
+}
 
-    const calculator = {
-        displayValue: '0',
-        firstOperand: null,
-        waitingForSecondOperand: false,
-        operator: null,
-    };
+function setHistory(num) {
+    document.getElementById("history").value = num;
+}
 
-    function inputDigit(digit) {
-        const {
-            displayValue
-        } = calculator;
-        calculator.displayValue = displayValue === '0' ? digit : displayValue + digit;
-    };
+function getResult() {
+    return document.getElementById("result").value;
+}
 
-    function resetCalculator() {
-        calculator.displayValue = '0';
-        calculator.firstOperand = null;
-        calculator.waitingForSecondOperand = false;
-        calculator.operator = null;
-        console.log(calculator);
-    };
+function setResult(num) {
+    document.getElementById("result").value = num;
+}
 
+const operator = document.getElementsByClassName("operator");
+for (var i = 0; i < operator.length; i++) {
+    operator[i].addEventListener('click', function () {})
+};
 
-    function updateDisplay() {
-        const display = document.querySelector('#result');
-        display.value = calculator.displayValue;
-    };
-
-    const keys = document.querySelector('.calculator-buttons');
-    keys.addEventListener('click', (event) => {
-        const {
-            target
-        } = event;
-        if (!target.matches('button')) {
-            return;
-        }
-
-        if (target.classList.contains('operator')) {
-            console.log('operator', target.textContent);
-            return;
-        }
-
-        if (target.classList.contains('clearCal')) {
-            resetCalculator();
-            updateDisplay();
-            return;
-        }
-
-        inputDigit(target.textContent);
-        updateDisplay();
-    });
-});
+const number = document.getElementsByClassName("number");
+for (var i = 0; i < number.length; i++) {
+    number[i].addEventListener('click', function () {
+        var output = getResult();
+        output = output + this.value;
+        setResult(output);
+    })
+};
