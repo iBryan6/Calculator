@@ -12,6 +12,12 @@ h1 {
     font-size: 50px;
 }
 
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
 .calculator {
     background-color: white;
     max-width: 450px;
@@ -29,7 +35,7 @@ h1 {
     padding: 20px 0;
     text-align: right;
     font-size: 30px;
-    color: SkyBlue;
+    color: black;
     cursor: none;
 }
 
@@ -61,7 +67,7 @@ h1 {
     transform: scale(1.1);
 }
 
-.clearCal {
+#clearCal {
     grid-column: span 3;
     background-color: #c31432 !important;
 }
