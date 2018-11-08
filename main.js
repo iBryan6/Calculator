@@ -20,7 +20,7 @@ function setResult(num) {
 inputKey.addEventListener('keydown', (e) => {
     var output = getResult();
     var history = getHistory();
-    if (e.keyCode >= 106 && e.keyCode <= 111) {
+    if (e.keyCode >= 106 && e.keyCode <= 111 && e.keyCode != 110) {
         if (output != "" || history != "") {
             output = output + e.key;
             setHistory(output);
