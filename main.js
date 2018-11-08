@@ -29,7 +29,7 @@ inputKey.addEventListener('keydown', (e) => {
     }
 
     if (e.keyCode == 13) {
-        history = parseInt(history);
+        history = parseFloat(history);
         history = history + output;
         let result = eval(history);
         setResult(result);
