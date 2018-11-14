@@ -1,26 +1,23 @@
+/*
+BUGS: TODOS SON CON EL TECLADO
+1. Apretar enter al resultado varias veces
+2. Operador se queda en el input
+3. Validacion de no poner un operadotr al inciar
+*/
+
+
 let inputKey = document.getElementById('result');
 
-function getHistory() {
-    return document.getElementById("history").value;
-}
+var getHistory = () => document.getElementById("history").value;
+var setHistory = num => document.getElementById("history").value = num;
+var getResult = () => document.getElementById("result").value;
+var setResult = num => document.getElementById("result").value = num;
 
-function setHistory(num) {
-    document.getElementById("history").value = num;
-}
-
-function getResult() {
-    return document.getElementById("result").value;
-}
-
-function setResult(num) {
-    document.getElementById("result").value = num;
-}
-
-function clear() {
+var clear = params => {
     setHistory("");
     setResult("");
     document.getElementById("result").focus();
-}
+};
 
 //KEYPRESS
 inputKey.addEventListener('keydown', (e) => {
@@ -51,20 +48,21 @@ inputKey.addEventListener('keydown', (e) => {
                     setHistory(result);
                     setResult("");
                 }
-            }
+            };
 
             //check if you hit enter on keyboard
             if (e.keyCode == 13) {
                 history = parseInt(history);
                 history = history + result;
                 result = eval(history);
-                setResult(result);
+                setResult(parseInt(result));
                 setHistory("");
-            }
-        }
-    }
+            };
+        };
+    };
 });
 
+//CLICKS
 //Adding operators
 const operator = document.getElementsByClassName("operator");
 //For each element that has operator in the class
