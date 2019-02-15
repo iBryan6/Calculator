@@ -1,2 +1,2 @@
 # Calculator
-Calculadora para un proyecto en Avantica
+Simple Calculator made with JS for an exercise in AVANTICA.
