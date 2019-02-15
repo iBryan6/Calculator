@@ -1,2 +1,2 @@
 # Calculator
-Simple Calculator made with JS for an exercise in AVANTICA.
+Simple Calculator made with ES6 for an Exercise in AVANTICA.
